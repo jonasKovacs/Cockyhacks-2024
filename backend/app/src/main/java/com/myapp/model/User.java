@@ -1,22 +1,20 @@
 package backend.app.src.main.java.com.myapp.model;
-
-import java.util.List;
+import java.util.UUID;
+import java.util.ArrayList;
 
 public class User {
-    private Long id;
-    private String username;
-    private String email;
-    private String passwordHash; // Store only a hashed version of the password
-    private String role; // e.g., "student", "instructor", "admin"
+    public UUID id;
+    public String username;
+    public String password;
+    public String email;
+    public Role role;
+    public ArrayList<UUID> reviews;
 
-    // Constructors
-    public User() {}
-
-    public User(Long id, String username, String email, String passwordHash, String role) {
-        this.id = id;
+    public User(String username, String password, String email, Role role) {
+        this.id = UUID.randomUUID();
         this.username = username;
+        this.password = password;
         this.email = email;
-        this.passwordHash = passwordHash;
         this.role = role;
-    }
+        this.reviews = new ArrayList<UUID>();
 }

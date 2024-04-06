@@ -1,20 +1,16 @@
 package backend.app.src.main.java.com.myapp.model;
-
+import java.util.ArrayList;
+import java.util.UUID;
 public class Course {
-    private Long id;
-    private String title;
-    private String description;
-    private Integer creditHours;
-    private List<Long> prerequisiteCourseIds; // A list of IDs for prerequisite courses
-
-    // Constructors
-    public Course() {}
-
-    public Course(Long id, String title, String description, Integer creditHours, List<Long> prerequisiteCourseIds) {
-        this.id = id;
+    public UUID id;
+    public String courseNumber;
+    public String title;
+    public ArrayList<Review> reviews;
+    
+    public Course(String courseNumber, String title) {
+        this.id = UUID.randomUUID();
+        this.courseNumber = courseNumber;
         this.title = title;
-        this.description = description;
-        this.creditHours = creditHours;
-        this.prerequisiteCourseIds = prerequisiteCourseIds;
+        this.reviews = new ArrayList<Review>();
     }
 }
