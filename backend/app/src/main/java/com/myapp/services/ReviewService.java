@@ -1,37 +1,50 @@
 package backend.app.src.main.java.com.myapp.services;
-
-import java.util.List;
+import backend.app.src.main.java.com.myapp.model.*;
+import java.util.UUID;
+import java.util.ArrayList;
 
 public class ReviewService {
-     public Review createReview(Review review) {
+    public ArrayList<Review> reviews;
+
+    public ReviewService(ArrayList<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public ReviewService() {
+        this.reviews = new ArrayList<Review>();
+    }
+    public ArrayList<Review> getAllReviews() {
+        return this.reviews;
+    }
+    public Review createReview(Review review) {
           return null;
-      }
-      public Review getReviewById(Long reviewId) {
+    }
+    public Review getReviewById(UUID reviewId) {
           return null;
-      }
-      public List<Review> getAllReviewsByCourse(Long courseId) {
+    }
+    public ArrayList<Review> getAllReviewsByCourse(UUID courseId) {
           return null;
-      }
+    }
   
-      public List<Review> getAllReviewsByUser(Long userId) {
-          return null;
-      }
+    public ArrayList<Review> getAllReviewsByUser(UUID userId) {
+        return null;
+    }
   
-      public Review updateReview(Long reviewId, Review updatedReview) {
-          return null;
-      }
+    public Review updateReview(UUID reviewId, Review updatedReview) {
+        return null;
+    }
+
+    public void deleteReview(UUID reviewId) {
+
+    }
   
 
-      public void deleteReview(Long reviewId) {
-
-      }
+    public Double calculateAverageCourseRating(UUID courseId) {
+        return null;
+    }
   
 
-      public Double calculateAverageCourseRating(Long courseId) {
-          return null;
-      }
-  
+    public void reportReview(UUID reviewId) {
 
-      public void reportReview(Long reviewId) {
-      }
+    }
 }

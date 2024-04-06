@@ -17,4 +17,20 @@ public class User {
         this.email = email;
         this.role = role;
         this.reviews = new ArrayList<UUID>();
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setRole(Role role) {
+        this.role = role;
+    }
+    public void addReview(UUID reviewId) {
+        this.reviews.add(reviewId);
+    }
 }

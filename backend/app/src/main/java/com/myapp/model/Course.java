@@ -13,4 +13,21 @@ public class Course {
         this.title = title;
         this.reviews = new ArrayList<Review>();
     }
+    public void setCourseNumber(String courseNumber) {
+        this.courseNumber = courseNumber;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public void addReview(Review review) {
+        this.reviews.add(review);
+    }
+    public void removeReview(UUID reviewId) {
+        for (Review review : this.reviews) {
+            if (review.id == reviewId) {
+                this.reviews.remove(review);
+                return;
+            }
+        }
+    }
 }
