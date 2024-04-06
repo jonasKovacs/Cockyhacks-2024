@@ -1,21 +1,30 @@
 import './App.css';
 import { useState } from "react";
 
-var data = require("./classes.json")
-
 function App() {
 
   const [value, setValue] = useState()
   const [data, setData] = useState([])
+  const [selectedTitle, setSelectedTitle] = useState('')
+  const [showDropdown, setShowDropdown] = useState(true)
+
   const onChange = (e) => {
+    setShowDropdown(true)
     setValue(e.target.value)
-    const data = require("./classes.json");
+    const data = require("./testing.json");
     setData(data)
   } 
 
   const onSearch=(searchTerm) => {
     setValue(searchTerm)
     console.log('search', searchTerm);
+    const selectedItem = data.find(item => item.code === searchTerm);
+    if (selectedItem) {
+      setSelectedTitle(selectedItem.title);
+    } else {
+      setSelectedTitle('');
+    }
+    setShowDropdown(false);
   }
 
   return (
@@ -29,11 +38,20 @@ function App() {
             <input type="text" onChange={onChange} value={value} className="search-input" placeholder="Enter class (ex. CSCE 145)" />
             <button onClick={() => onSearch(value)}> Search </button>
           </div>
+
+          {showDropdown &&
           <div className="dropdown">
             {
-              data.filter(item => item.class.startsWith(value)).map((item)=> <div
-              onClick={()=>onSearch(item.class)} >{item.class} </div>
+              data.filter(item => item.code.startsWith(value)).map((item)=> <div
+              onClick={()=>onSearch(item.code)}>
+                  {item.code}
+                </div>
             )}
+          </div>
+          }
+          <div className="result">
+            <p className='courseName'>{selectedTitle}</p>
+            <p className='courseDescription'>Description</p>
           </div>
         </div>
       </main>
