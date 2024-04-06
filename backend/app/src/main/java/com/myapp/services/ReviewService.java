@@ -1,14 +1,37 @@
 package backend.app.src.main.java.com.myapp.services;
 
+import java.util.List;
+
 public class ReviewService {
-    /*
-     * createReview(Review review): Adds a new review to the system.
-getReviewById(Long reviewId): Retrieves a single review by its ID.
-getAllReviewsByCourse(Long courseId): Lists all reviews for a specific course.
-getAllReviewsByUser(Long userId): Fetches all reviews written by a specific user.
-updateReview(Long reviewId, Review updatedReview): Updates an existing review with new content.
-deleteReview(Long reviewId): Removes a review from the system.
-calculateAverageCourseRating(Long courseId): Provides the average rating of a course.
-reportReview(Long reviewId): Flags a review as reported for moderation (optional).
-     */
+     public Review createReview(Review review) {
+          return null;
+      }
+      public Review getReviewById(Long reviewId) {
+          return null;
+      }
+      public List<Review> getAllReviewsByCourse(Long courseId) {
+          return null;
+      }
+  
+      public List<Review> getAllReviewsByUser(Long userId) {
+          return null;
+      }
+  
+      public Review updateReview(Long reviewId, Review updatedReview) {
+          return null;
+      }
+  
+
+      public void deleteReview(Long reviewId) {
+
+      }
+  
+
+      public Double calculateAverageCourseRating(Long courseId) {
+          return null;
+      }
+  
+
+      public void reportReview(Long reviewId) {
+      }
 }
