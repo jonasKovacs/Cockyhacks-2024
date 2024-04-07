@@ -1,6 +1,6 @@
 package backend.app.src.main.java.com.myapp.model;
 import java.util.UUID;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.time.LocalDateTime;
 
 public class Review {
@@ -25,7 +25,7 @@ public class Review {
     public void setContent(String content) {
         this.content = content;
     }
-    
+
     public void updateReview(double starRating, String content) {
         this.starRating = starRating;
         this.content = content;

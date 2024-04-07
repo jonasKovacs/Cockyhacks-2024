@@ -3,12 +3,19 @@ import backend.app.src.main.java.com.myapp.model.*;
 import java.util.ArrayList;
 import java.util.UUID;
 public class CourseService {
-    private ArrayList<Course> courses;
+    public ArrayList<Course> courses;
+    private static CourseService instance;
     public CourseService() {
         this.courses = new ArrayList<Course>();
     }
     public CourseService(ArrayList<Course> courses) {
         this.courses = courses;
+    }
+    public static CourseService getInstance() {
+        if (instance == null) {
+            instance = new CourseService();
+        }
+        return instance;
     }
 
 /*getAllCourses()

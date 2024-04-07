@@ -8,7 +8,7 @@ public class User {
     public String password;
     public String email;
     public Role role;
-    public ArrayList<UUID> reviews;
+    public ArrayList<Review> reviews;
 
     public User(String username, String password, String email, Role role) {
         this.id = UUID.randomUUID();
@@ -16,7 +16,7 @@ public class User {
         this.password = password;
         this.email = email;
         this.role = role;
-        this.reviews = new ArrayList<UUID>();
+        this.reviews = new ArrayList<Review>();
     }
     public void setUsername(String username) {
         this.username = username;
@@ -30,7 +30,7 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
-    public void addReview(UUID reviewId) {
-        this.reviews.add(reviewId);
+    public void addReview(Review review) {
+        this.reviews.add(review);
     }
 }
