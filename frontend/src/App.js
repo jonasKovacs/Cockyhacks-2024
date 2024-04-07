@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <style>
-      @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
       </style>
       <header className="App-header">
         <img src="logo.png"/>
