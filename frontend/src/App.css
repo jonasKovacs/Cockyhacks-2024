@@ -105,7 +105,9 @@
 }
 
 .courseDescription {
+  margin-top: 30px;
   text-align: left;
+  font-size: 20px;
 }
 
 .courseCode {
@@ -113,6 +115,42 @@
   font-size: 30px;
 }
 
+.courseReviews button {
+  margin-top: 20px;
+  width: 170px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.courseReviews {
+  font-size: 30px;
+}
+
 .recommend {
   font-weight: bold;
+  width: 200px;
+  background-color: rgb(25, 24, 24);
+  color: rgb(218, 214, 214);
+  padding: 10px;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  height: 60px;
+}
+
+.percent {
+  font-size: 40px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.reviews {
+  text-align: left;
+}
+
+.reviewList {
+  font-size: 18px;
+  text-align: left;
 }
