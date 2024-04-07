@@ -1,4 +1,4 @@
-package backend.app.src.main.java.com.myapp.controllers;
+package backend.src.main.java.com.myapp.controllers;
 import java.util.UUID;
 //import java.util.ArrayList;
 

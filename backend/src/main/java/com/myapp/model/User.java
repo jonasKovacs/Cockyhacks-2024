@@ -1,4 +1,4 @@
-package backend.app.src.main.java.com.myapp.model;
+package backend.src.main.java.com.myapp.model;
 import java.util.UUID;
 import java.util.ArrayList;
 
