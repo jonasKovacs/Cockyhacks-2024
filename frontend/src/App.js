@@ -7,9 +7,11 @@ function App() {
   const [data, setData] = useState([])
   const [selectedTitle, setSelectedTitle] = useState('')
   const [showDropdown, setShowDropdown] = useState(true)
+  const [showResult, setShowResult] = useState(false)
 
   const onChange = (e) => {
     setShowDropdown(true)
+    setShowResult(true)
     setValue(e.target.value)
     const data = require("./testing.json");
     setData(data)
@@ -29,6 +31,9 @@ function App() {
 
   return (
     <div className="App">
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
+      </style>
       <header className="App-header">
         <img src="logo.png"/>
       </header>
@@ -49,10 +54,15 @@ function App() {
             )}
           </div>
           }
+          { showResult&&
           <div className="result">
+            <p className='courseCode'>{value}</p>
             <p className='courseName'>{selectedTitle}</p>
+            <p className='recommend'>Recommend Course: 84%</p>
             <p className='courseDescription'>Description</p>
+            <p className='courseDescription'>Reviews</p>
           </div>
+          }
         </div>
       </main>
     </div>
