@@ -32,15 +32,25 @@
   padding-top: 100px;
 }
 
+.searchText {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
 .App-main .search-inner {
   align-items: center;
 }
 
 .App-main .search-input {
-  text-align: center;
+  padding-left: 10px;
   width: 400px;
   height: 60px;
-  font-size: 25px;
+  font-size: 20px;
   font-family: raleway;
   color: rgb(46, 46, 46);
 }
@@ -53,21 +63,26 @@
 
 .App-main button {
   width: 100px;
-  font-size: 25px;
+  font-size: 20px;
   height: 65px;
   font-family: raleway;
-  color: white;
-  background-color:rgb(59, 54, 54);
+  color: rgb(218, 214, 214);
+  background-color:rgb(25, 24, 24);
 }
 
 .dropdown {
-  background-color:rgb(238, 238, 238);
+  background-color:white;
   display: flex;
   flex-direction: column;
   border: 2px solid rgb(101, 101, 101);
-  width: 504px;
+  width: 511px;
   font-size: 25px;
   color: rgb(46, 46, 46);
+}
+
+.dropdown-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .result {

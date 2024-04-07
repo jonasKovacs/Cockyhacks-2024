@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function App() {
 
-  const [value, setValue] = useState()
+  const [value, setValue] = useState('')
   const [data, setData] = useState([])
   const [selectedTitle, setSelectedTitle] = useState('')
   const [showDropdown, setShowDropdown] = useState(true)
@@ -11,11 +11,10 @@ function App() {
 
   const onChange = (e) => {
     setShowDropdown(true)
-    setShowResult(true)
     setValue(e.target.value)
     const data = require("./testing.json");
     setData(data)
-  } 
+  }
 
   const onSearch=(searchTerm) => {
     setValue(searchTerm)
@@ -27,6 +26,7 @@ function App() {
       setSelectedTitle('');
     }
     setShowDropdown(false);
+    setShowResult(true)
   }
 
   return (
@@ -40,6 +40,7 @@ function App() {
       <main className="App-main">
         <div className="search-container">
           <div className='search-inner'>
+            <p className="searchText">Search Course</p>
             <input type="text" onChange={onChange} value={value} className="search-input" placeholder="Enter class (ex. CSCE 145)" />
             <button onClick={() => onSearch(value)}> Search </button>
           </div>
@@ -47,21 +48,22 @@ function App() {
           {showDropdown &&
           <div className="dropdown">
             {
-              data.filter(item => item.code.startsWith(value)).map((item)=> <div
-              onClick={()=>onSearch(item.code)}>
+              data.filter(item => item.code.startsWith(value)).map(
+                (item)=> 
+                <div onClick={()=>onSearch(item.code)} className="dropdown-item">
                   {item.code}
                 </div>
             )}
           </div>
           }
-          { showResult&&
-          <div className="result">
-            <p className='courseCode'>{value}</p>
-            <p className='courseName'>{selectedTitle}</p>
-            <p className='recommend'>Recommend Course: 84%</p>
-            <p className='courseDescription'>Description</p>
-            <p className='courseDescription'>Reviews</p>
-          </div>
+          {showResult &&
+            <div className="result">
+              <p className='courseCode'>{value}</p>
+              <p className='courseName'>{selectedTitle}</p>
+              <p className='recommend'>Recommend Course: 84%</p>
+              <p className='courseDescription'>Description</p>
+              <p className='courseDescription'>Reviews</p>
+            </div>
           }
         </div>
       </main>
