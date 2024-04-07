@@ -1,5 +1,5 @@
-package backend.src.main.java.com.myapp.services;
-import backend.src.main.java.com.myapp.model.*;
+package com.myapp.services;
+import com.myapp.model.*;
 import java.util.ArrayList;
 import java.util.UUID;
 public class CourseService {

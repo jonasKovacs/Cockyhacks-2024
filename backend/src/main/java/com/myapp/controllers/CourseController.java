@@ -1,4 +1,4 @@
-package backend.src.main.java.com.myapp.controllers;
+package com.myapp.controllers;
 
 public class CourseController {
     

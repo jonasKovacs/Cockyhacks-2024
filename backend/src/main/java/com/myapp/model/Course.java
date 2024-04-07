@@ -1,4 +1,4 @@
-package backend.src.main.java.com.myapp.model;
+package com.myapp.model;
 import java.util.ArrayList;
 import java.util.UUID;
 public class Course {
